@@ -15,10 +15,14 @@
     unused_qualifications
 )]
 
+mod hex_terrain;
+
 use gdnative::prelude::*;
 
 // Function that registers all exposed classes to Godot
-fn init(handle: InitHandle) {}
+fn init(handle: InitHandle) {
+    handle.add_class::<hex_terrain::HexTerrain>();
+}
 
 // macros that create the entry-points of the dynamic library.
 godot_gdnative_init!();
